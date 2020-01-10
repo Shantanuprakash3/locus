@@ -1,0 +1,20 @@
+build int abc(int a,)
+begin
+define int apple;
+define int j;
+j=apple+j;
+return b;
+end
+
+void main()
+begin
+	define int a;
+	define int b;
+	if(a<b)
+	begin
+	a=a+1;
+	end
+	return ;
+	
+end
+

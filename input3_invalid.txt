@@ -1,0 +1,24 @@
+build int abc(int a,)
+begin
+return b;
+end
+
+build int abc(int a,)
+begin
+define int happy;
+define int sad;
+define point[2] lol;
+lol=happy+sad;
+return b;
+end
+
+void main()
+begin
+	define int a;
+	define int b;
+	define point[2] f;
+	f=a+b;
+	f=abc(a);
+	return ;	
+end
+

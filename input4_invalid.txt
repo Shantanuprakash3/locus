@@ -1,0 +1,16 @@
+build int abc(int a,)
+begin
+#no return statement.Hence Invalid.
+end
+
+void main()
+begin
+	define int a;
+	define int b;
+	define point[2] f;
+	f=a+b;
+
+	return ;
+	
+end
+

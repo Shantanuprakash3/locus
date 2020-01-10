@@ -1,0 +1,56 @@
+<program> -> <functions> <main_function> .
+<functions> -> <function> <functions> .
+<functions> ->  E .
+<function> -> <func_sign> <func_body> .
+<func_sign> -> tk_build <func_type> tk_func_id tk_lb <args> tk_rb .
+<func_body> -> tk_begin <declarations> <statements> <return_statements> tk_end .
+<main_function> -> <main_signature> <main_func_body> .
+<main_signature> -> tk_void tk_main tk_lb tk_rb .        
+<main_func_body> -> tk_begin <declarations> <statements> <void_return> tk_end .
+<func_type> -> tk_int .
+<func_type> -> tk_float . 
+<func_type> -> tk_string .
+<return_statements> -> tk_return <XX> tk_sc . 
+<XX> -> tk_id .
+<XX> -> E .
+<void_return> -> tk_return tk_sc .
+<declarations> -> tk_define <type> tk_id tk_sc <declarations> .  
+<declarations> -> E .
+<type> -> tk_int . 
+<type> -> tk_float .
+<type> -> <point_type> .
+<type> -> <polygon_type> .
+<point_type> -> tk_point tk_ob tk_integer_literal tk_cb .
+<polygon_type> -> tk_polygon tk_ob tk_integer_literal tk_cb tk_ob tk_integer_literal tk_cb .
+<func>  -> tk_lb <calling_args> tk_rb .
+<args> -> <type> tk_id tk_com <args> . 
+<args> ->  E .
+<calling_args>  -> tk_id tk_com <calling_args> .  
+<calling_args> ->  E .
+<statements> -> <assign> <statements> .  
+<statements> -> <iteration> <statements> .
+<statements> -> <selection> <statements> . 
+<statements> -> <func_call> . 
+<statements> -> tk_comment .
+<statements> -> E .
+<func_call> -> tk_func_id <func> tk_sc . 
+<assign> -> tk_id tk_equal <expr> tk_sc .
+<expr> -> <num1> <op1> <num1> .
+<num1> -> tk_id .
+<num1> -> tk_integer_literal . 
+<num1> -> tk_point_literal .
+<op1> -> tk_plus .
+<op1> -> tk_minus .
+<op1> -> tk_dist .
+<op1> -> tk_nn .
+<iteration> -> tk_while tk_lb <cond_exp> tk_rb tk_begin <statements> tk_end . 
+<selection> -> tk_if tk_lb <cond_exp> tk_rb tk_begin <statements> tk_end <else_selection> . 
+<else_selection> -> tk_else tk_begin <statements> tk_end .
+<else_selection> -> E .
+<cond_exp> -> <num1> <op2> <num1> .
+<op2> -> tk_G .
+<op2> -> tk_EQ . 
+<op2> -> tk_LT .
+<op2> -> tk_LE .
+<op2> -> tk_GE .
+<num1> -> tk_polygon_literal .

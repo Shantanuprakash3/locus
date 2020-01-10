@@ -1,0 +1,22 @@
+Some of the type checking rules are :-
+
+1. The type of an identifier is the type while declaring the variable.
+2. The type of tk_int is an integer.
+3. The type of tk_point is an array of integers.
+4. The type of tk_polygon is an array of points.
+5. Some of the type rules and conversions are :
+   a. integer_id = integer_id + integer_id
+   b. integer_id = integer + integer_id
+   c. integer = point _dist_ point
+   d. point   = point _nn_ polygon
+
+
+Some of the semantic rules are :
+1. An identifier must be declared before its use.
+2. The type returned by a function must be same as the type used which 	  declaring the function.
+3. An if statement must have expression of boolean type.
+4. A while statement must have expression of boolean type.
+5. function overloading is not allowed.
+6. The right hand side of an assignment statement must be of the same type as the type of the left hand side.
+7. The functions have to be declared before the main function.
+
